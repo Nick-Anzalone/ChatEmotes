@@ -23,16 +23,12 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.twitchEmotes;
+package com.Emotes;
 
-import com.google.common.base.Joiner;
 import com.google.inject.Provides;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
@@ -55,13 +51,12 @@ import net.runelite.client.util.ImageUtil;
 
 @Slf4j
 @PluginDescriptor(
-		name = "Emoji Madness",
-		description = "Use emojis instead of words"
+		name = "Chat Emotes",
+		description = "Use cool custom emotes in OSRS chat"
 )
-public class TwitchEmotesPlugin extends Plugin
+public class ChatEmotesPlugin extends Plugin
 {
-	private static final Pattern TAG_REGEXP = Pattern.compile("<[^>]*>");
-	private static final Pattern WHITESPACE_REGEXP = Pattern.compile("[\\s\\u00A0]");
+
 
 	@Inject
 	private Client client;
@@ -70,14 +65,14 @@ public class TwitchEmotesPlugin extends Plugin
 	private ChatMessageManager chatMessageManager;
 
 	@Inject
-	private TwitchEmotesConfig config;
+	private ChatEmotesConfig config;
 
 	private int modIconsStart = -1;
 
 	@Provides
-	TwitchEmotesConfig provideConfig(ConfigManager configManager)
+	ChatEmotesConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(TwitchEmotesConfig.class);
+		return configManager.getConfig(ChatEmotesConfig.class);
 	}
 
 	@Override
@@ -189,7 +184,6 @@ public class TwitchEmotesPlugin extends Plugin
 			retVal=retVal.replace(entry.getKey(),"<img=" + use + ">");
 			use++;
 		}
-		boolean editedMessage = false;
 		return retVal;
 	}
 

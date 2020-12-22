@@ -22,14 +22,14 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.twitchEmotes;
+package com.Emotes;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("TwitchEmotes")
-public interface TwitchEmotesConfig extends Config
+@ConfigGroup("ChatEmotes")
+public interface ChatEmotesConfig extends Config
 {
 	@ConfigItem(
 			keyName = "appendMode",

@@ -3,6 +3,8 @@ This plug-in contains over 100 unique emotes from Runescape creators and other p
 
 I have recieved permission to use these all these emotes in this plugin from the streamers who own these emotes.
 
+##What The plugin Looks Like
+
 ## Contents
 |Emoji|Name|
 |---|---|

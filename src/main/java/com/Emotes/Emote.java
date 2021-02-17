@@ -37,11 +37,17 @@ import java.util.Map;
 @AllArgsConstructor
 enum Emote
 {
-	FEELSBADMAN("feelsbadman","feelsbadman"),
-	FEELSGOODMAN("feelsgoodman","feelsgoodman"),
+	FEELSBADMAN("feelsbadman","FeelsBadMan"),
+	FEELSDANKMAN("feelsdankman","FeelsDankMan"),
+	FEELSGOODMAN("feelsgoodman","FeelsGoodMan"),
+	FEELSOKAYMAN("feelsokayman","FeelsOkayMan"),
+	HYPERBRUH("hyperbruh","HYPERBRUH"),
 	KEKW("kekw","kekw"),
+	KKONAW("kkonaw","KKonaW"),
 	LULW("lulw","LULW"),
 	MAMMALBANANNA("mammalbananna","mammalBananna"),
+	MONKAGUN("monkagun","monkaGun"),
+	MONKAHMM("monkahmm","monkaHmm"),
 	MONKAS("monkas","monkaS"),
 	MONKAW("monkaw","monkaW"),
 	ODA1("oda1","oda1"),
@@ -49,16 +55,29 @@ enum Emote
 	ODAFACE1("odaface1","odaFace1"),
 	ODAFACE2("odaface2","odaFace2"),
 	ODAFIRE("odafire","odaFire"),
-	OMEGALUL("omegalul","omegalul"),
-	PEPEGA("pepega","pepega"),
-	PEPELAUGH("pepelaugh","pepelaugh"),
-	POGGERS("poggers","poggers"),
-	WEIRDCHAMP("weirdchamp","weirdchamp"),
+	OMEGALUL("omegalul","OMEGALUL"),
+	PEEPOCLOWN("peepoclown","peepoClown"),
+	PEEPOHAPPY("peepohappy","peepoHappy"),
+	PEEPOSAD("peeposad","peepoSad"),
+	PEPEGA("pepega","Pepega"),
+	PEPEHANDS("pepehands","PepeHands"),
+	PEPELAUGH("pepelaugh","PepeLaugh"),
+	PEPOG("pepog","PepoG"),
+	PEPOTHINK("pepothink","PepoThink"),
+	PIKACHUS("pikachus","pikachuS"),
+	POG("pog","Pog"),
+	POGGERS("poggers","POGGERS"),
+	REEEEE("reeeee","REEeee"),
+	SADGE("sadge","Sadge"),
+	WESMART("wesmart","weSmart"),
+	WIDEHARDO("widehardo","WideHardo"),
+	YEP("yep","YEP"),
 
 
 
 
-	;
+
+			;
 
 	public static final Map<String, Emote> EMOTES;
 	private static final ImmutableListMultimap<String, String> EMOTE_TRIGGERS;

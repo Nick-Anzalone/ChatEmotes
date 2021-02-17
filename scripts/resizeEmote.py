@@ -3,7 +3,7 @@ import os
 from resizeimage import resizeimage
 
 
-directory = r'../src/main/resources/com/twitchEmotes/'
+directory = r'../src/main/resources/com/Emotes/'
 for filename in os.listdir(directory):
     if filename.endswith(".png") or filename.endswith(".png"):
         path = os.path.join(directory, filename)

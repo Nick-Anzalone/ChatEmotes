@@ -117,8 +117,6 @@ public class ChatEmotesPlugin extends Plugin
 				log.warn("Failed to load the sprite for emoji " + emote, ex);
 			}
 		}
-
-		log.debug("Adding emoji icons");
 		client.setModIcons(newModIcons);
 	}
 
@@ -178,11 +176,20 @@ public class ChatEmotesPlugin extends Plugin
 
 	@Nullable
 	String updateMessage(final String message) {
-		String retVal = message.toLowerCase();
-		int use = modIconsStart;
-		for(Map.Entry<String,Emote> entry : Emote.EMOTES.entrySet()){
-			retVal=retVal.replace(entry.getKey(),"<img=" + use + ">");
-			use++;
+		String lower = message.toLowerCase();
+		String[] splited = lower.split("\\s+");
+		String retVal = "";
+		for(String string : splited) {
+			int use = modIconsStart;
+			for (Map.Entry<String, Emote> entry : Emote.EMOTES.entrySet()) {
+				if(string.equals(entry.getKey())) {
+					string = "<img=" + use + ">";
+				}
+				use++;
+
+			}
+			retVal += string;
+			retVal += " ";
 		}
 		return retVal;
 	}
